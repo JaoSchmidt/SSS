@@ -13,3 +13,7 @@
 !.ssh/config
 
 !.bashrc
+
+!Documents/
+!Documents/instalar_tudo.sh
+
