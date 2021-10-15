@@ -15,6 +15,7 @@ allPackages=(
 "default-jre"
 "default-jdk"
 "steam"
+"git"
 "spotify"
 #"mysql-server"
 "wget"
@@ -67,5 +68,9 @@ vim +'PlugInstall --sync' +qa || echo "vim +'PlugInstall --sync' +qa failed"
 
 sudo systemctl enable ssh || echo "systemctl enable ssh failed"
 sudo ufw allow ssh || echo "ufw allow ssh failed"
+
+git config --global user.name "JaoSchmidt" || echo "add git username failed"
+git config --global user.email jhsc98@gmail.com || echo "add git email failed"
+#git config core.sparsecheckout true || echo "sparsecheckout failed"
 
 cowsay "Tudo pronto"
