@@ -1,0 +1,13 @@
+# Ignora tudo/Ingores everthing
+*
+
+# Exceto/Except
+!.gitignore
+
+!.vimrc
+!.vim/coc-settings-json 
+!.coc-settings-json.backup
+
+!.ssh/config
+
+!.bashrc
