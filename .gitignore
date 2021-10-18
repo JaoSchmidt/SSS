@@ -4,17 +4,36 @@
 # Exceto/Except
 !.gitignore
 
+## vim
 !.vimrc
 !.vim/
 !.vim/coc-settings.json 
 !.vim/coc-settings.json.backup
 
+## openssh
 !.ssh/
 !.ssh/config
 
+## bash
 !.bashrc
 
+## dwm
+!.xinitrc
 !Documents/
+!Documents/dwm-6.2/
+!Documents/dwm-6.2/config.def.h
+!Documents/dwm-6.2/config.mk
+!Documents/dwm-6.2/drw.c
+!Documents/dwm-6.2/drw.h
+!Documents/dwm-6.2/dwm.1
+!Documents/dwm-6.2/dwm.c
+!Documents/dwm-6.2/Makefile
+!Documents/dwm-6.2/transient.c
+!Documents/dwm-6.2/util.c
+!Documents/dwm-6.2/util.h
+
+
+## etc
 !Documents/instalar_tudo.sh
 
 !README.md
