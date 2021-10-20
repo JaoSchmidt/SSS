@@ -63,14 +63,23 @@ done
 # Outros commandos
 #############################################################################
 
+## Comandos vim
 # Precisa ter o .vimrc antes de chegar aqui
 vim +'PlugInstall --sync' +qa || echo "vim +'PlugInstall --sync' +qa failed"
 
+## Commandos openssh
 sudo systemctl enable ssh || echo "systemctl enable ssh failed"
 sudo ufw allow ssh || echo "ufw allow ssh failed"
 
+## Comandos git
 git config --global user.name "JaoSchmidt" || echo "add git username failed"
 git config --global user.email jhsc98@gmail.com || echo "add git email failed"
 #git config core.sparsecheckout true || echo "sparsecheckout failed"
+
+## Comandos dwm
+# move a sessão do dwm para pode ser usado no login ...
+# supondo que o arq tenha sido pego do repositório
+sudo mv dwm.desktop /usr/share/xsessions/
+
 
 cowsay "Tudo pronto"

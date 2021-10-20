@@ -20,9 +20,11 @@ set showmatch
 set smartcase
 set autowrite
 set mouse=a
+map <leader><space> :let @/=''<cr> 
+
+" permite numeros hibridos
 set number
 set relativenumber
-map <leader><space> :let @/=''<cr> 
 
 syntax on
 
@@ -30,7 +32,10 @@ syntax on
 command! Wq wq
 command! W w
 command! WQ wq
+command! Q q
 
+
+" simplifica indexação
 set tabstop=3
 set shiftwidth=3
 set softtabstop=3
