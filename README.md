@@ -1,7 +1,7 @@
 # Supreme-Schmidt-Scripts
 Casual files for quality of life
 
-**Documents/instala_tudo.sh**: Script utilizado para instalar rapidamente grande parte dos packs e outros programas escolhidos
+**Documents/ubuntu-quick-install.sh**: Script utilizado para instalar rapidamente grande parte dos packs e outros programas escolhidos
 
 **.ssh/confi**: Contém configurações uteis para o ssh, incluindo endereços
 
