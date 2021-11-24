@@ -23,6 +23,8 @@
 
 
 ## etc
-!Documents/ubuntu-quick-install.sh
+!Documents/
+!Documents/scripts/
+!Documents/scripts/*
 
 !README.md
