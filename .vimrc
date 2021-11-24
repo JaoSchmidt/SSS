@@ -11,7 +11,7 @@ highlight CocHintFloat ctermfg=Red  guifg=#ff0000
 
 :nnoremap <leader>rc :vsplit $MYVIMRC<cr>
 
-command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+command SW :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 " evitar o shift quando detecta um erro
 set signcolumn=yes
