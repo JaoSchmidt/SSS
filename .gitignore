@@ -9,6 +9,8 @@
 !.vim/
 !.vim/coc-settings.json 
 !.vim/coc-settings.json.backup
+!.vim/templates/
+!.vim/templates/*
 
 ## openssh
 !.ssh/
