@@ -24,6 +24,14 @@ echo "<!DOCTYPE html>
 			.center {
 				text-align: center;
 			}
+			.title {
+				text-align: center;
+				font-size:20px;
+				font-weight:bold;
+				padding-top:12px;
+				padding-bottom: 12px;
+				background-color: #d97012
+			}
 			hr.solid{
 				border-top: 3px solid #bbb;
 			}
@@ -31,14 +39,16 @@ echo "<!DOCTYPE html>
 				border-top: 8px solid #bbb;
 				border-radius: 5px;
 			}
+			#estoque {
+				margin-left:auto;
+				margin-right:auto;
+			}
 			#estoque tr:nth-child(even){background-color: #f2f2f2;}
-			#estoque tr:hover {background-color: #ddd;}
 			#estoque th {
 			  padding-top: 12px;
 			  padding-bottom: 12px;
 			  text-align: left;
-			  background-color: #04AA6D;
-			  color: white;
+			  background-color: #d97102;
 			}	
 		</style>
 		<meta charset=\"UTF-8\">
@@ -47,11 +57,12 @@ echo "<!DOCTYPE html>
 	<body>
 	<div class=\"center\">
 		<h1>Catálogos de itens para revenda</h1>
-		<h3>Página contém todos os estoques disponíveis atualmente das obras da ProGénie</h3>
+		<h3>Página contém todos os estoques disponíveis atualmente</h3>
 		<h4>Contato:</h4>
+		<p>Cel: 21 99719-4265 ou 21 97468-4345</p>
 		<hr class=\"rounded\">
 	</div>
-	<div>" > site.html
+	<div class=>" > site.html
 
 declare -i row=0
 
@@ -65,8 +76,8 @@ while IFS=$';\n' read -r -a array; do
 			 echo -e '\t\t</table>' >> site.html
 			 echo -e '\t\t<hr class="solid">' >> site.html
 		 fi
-			 echo -e '\t\t<h3>'${array[@]#*:}'</h3>' >> site.html
-		 echo -e '\t\t<table id="estoque">\n\t\t\t<tr>' >> site.html
+		 echo -e '\t\t<table id="estoque">' >> site.html
+		 echo -e '\t\t<caption class="title">'${array[@]#*:}'</caption>\n\t\t\t<tr>' >> site.html
 		 # printa o cabeçalho da tabela
 		 IFS=$';\n' read -r -a array;
 		 for i in "${array[@]}"; do
@@ -83,6 +94,7 @@ while IFS=$';\n' read -r -a array; do
 	 fi
 done < "$csv_file"	
 	
-echo "		</div>	
+echo "			</table>
+		</div>	
 	</body>
 </html>" >> site.html
