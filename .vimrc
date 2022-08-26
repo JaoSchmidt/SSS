@@ -77,14 +77,19 @@ function! s:check_back_space() abort
 endfunction
   
 " Trigger completion with tab
+  " remap for complete to use tab and <cr>
 inoremap <silent><expr> <TAB>
-       \ pumvisible() ? "\<C-n>" :
-       \ <SID>check_back_space() ? "\<TAB>" :
-       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+	  \ coc#pum#visible() ? coc#pum#next(1):
+	  \ <SID>check_back_space() ? "\<Tab>" :
+	  \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-@> coc#refresh()
+"let g:coc_snippet_next = '<Tab>'
+"let g:coc_snippet_prev = '<S-Tab>'
+
+" Highlight search 
+"hi CocSearch ctermfg=12 guifg=#18A3FF
+"hi CocMenuSel ctermbg=109 guibg=#13354A
 
 " Permite o uso de skeletons
 
